@@ -16,7 +16,16 @@ WikiViewer.controller('WikiCtrl', ['$scope', '$http', function($scope,$http) {
 			}
 		}).then(function sucess(response) {
 			$scope.res = response.data;
-			console.log('success ', response);
+
+			for(var i=0;i<$scope.res.length;i++) {
+				var resObj = {
+          title: res.data[1][i],
+          description: res.data[2][i],
+          link: res.data[3][i]
+        }
+			}
+
+			console.log('success ', response.data);
 		}, function error(response) {
 			console.log('error ', response);
 		})
