@@ -7,6 +7,7 @@
 		<title>WikiViewer</title>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -18,15 +19,16 @@
 	<body ng-app="WikiViewer">
 		<h1 class="text-center">WikiViewer</h1>
 		<div ng-controller="WikiCtrl">
-			<div>
-			FIRST:{{res[1][0]}}
-			SECOND:{{res[2][0]}}
-			THIRD:{{res[3][0]}}
-			</div>
 
 			<form ng-submit="Search()" class="text-center">
       	<input class="search text-center" ng-model="searchTerm" placeholder="Search" type="search" ng-change="clearAll()">  
       </form>
+
+      <div class="well" ng-repeat="obj in resArray">
+			<h2 class="title">{{obj.title}}</h2>
+			<p>{{obj.description}}</p>
+			<p class="description"><a href="{{obj.link}}">Click to see full entry</a></p>
+			</div>
 
 		</div>
 

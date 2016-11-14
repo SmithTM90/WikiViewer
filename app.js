@@ -9,20 +9,21 @@ WikiViewer.controller('WikiCtrl', ['$scope', '$http', function($scope,$http) {
 			params: {
 				action: 'opensearch',
 				search: $scope.searchTerm,
-				limit: 20,
+				limit: 10,
 				namespace: 0,
 				format: 'json',
 				callback: 'JSON_CALLBACK'
 			}
 		}).then(function sucess(response) {
-			$scope.res = response.data;
-
-			for(var i=0;i<$scope.res.length;i++) {
+			$scope.res = response;
+			$scope.resArray = [];
+			for(var i=0;i<$scope.res.data[1].length;i++) {
 				var resObj = {
-          title: res.data[1][i],
-          description: res.data[2][i],
-          link: res.data[3][i]
+          title: $scope.res.data[1][i],
+          description: $scope.res.data[2][i],
+          link: $scope.res.data[3][i]
         }
+        $scope.resArray.push(resObj);
 			}
 
 			console.log('success ', response.data);
