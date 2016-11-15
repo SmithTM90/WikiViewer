@@ -32,4 +32,13 @@ WikiViewer.controller('WikiCtrl', ['$scope', '$http', function($scope,$http) {
 		})
 	}
 
+	$scope.clearAll = function(){
+		console.log('hit clear');
+	  	if($scope.searchTerm !== '') {
+	  		$scope.searchTerm = '';
+      	$scope.res = [];
+      	$scope.Search();
+	  	}
+  	}
+
 }])

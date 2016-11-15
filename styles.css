@@ -10,6 +10,10 @@ h1 {
 	margin-top: 15%;
 }
 
+.clearButton {
+	text-align: center;
+}
+
 .well {
 	background-color: olive;
 	border: 0px solid olive;

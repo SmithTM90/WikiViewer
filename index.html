@@ -23,14 +23,18 @@
 		<h3 class="title"><a class="random" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</a></h3>
 
 			<form ng-submit="Search()" class="text-center">
-      	<input class="search text-center" ng-model="searchTerm" placeholder="Search" type="search" ng-change="clearAll()">  
+      	<input class="search text-center" ng-model="searchTerm" placeholder="Search" type="search">  
       </form>
 
-      <div class="well" ng-repeat="obj in resArray">
+		<div class="clearButton">
+      <button ng-click="clearAll()">Clear Selection</button>
+    </div>
+
+		<div class="well" ng-repeat="obj in resArray">
 			<h2 class="title">{{obj.title}}</h2>
 			<p>{{obj.description}}</p>
 			<p class="description"><a href="{{obj.link}}">Click to see full article</a></p>
-			</div>
+		</div>
 
 		</div>
 
