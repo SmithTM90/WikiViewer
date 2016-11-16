@@ -1,6 +1,7 @@
 body {
 	background-color: #057;
 	color: #222;	
+	font-family: 'Arvo', serif;
 }
 
 p {
@@ -13,11 +14,13 @@ h1 {
 
 input {
 	border: none;
+	outline: none;
 }
 
 button {
-	background-color: #775d00;
-	border: 1px solid #553c00;
+	background-color: #720;
+	border: 1px solid #510;
+	outline: none;
 }
 
 .search {
@@ -25,6 +28,7 @@ button {
 }
 
 .well {
+	font-family: 'Rubik', sans-serif;
 	background-color: #775d00;
 	border: 0px solid #775d00;
 	border-radius: 0px;
