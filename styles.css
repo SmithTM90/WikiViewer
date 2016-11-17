@@ -13,8 +13,19 @@ h1 {
 }
 
 input {
+	width: 200px;
+	background-color: #997f22;
 	border: none;
 	outline: none;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+
+input:focus {
+	width: 85%;
+	height: 35px;
+	font-size: 25px;
+	background-color: #775d00;
 }
 
 button {
@@ -37,13 +48,13 @@ button {
 
 .random {
 	color: #222;
-	border: 1px solid #775d00;
 	text-decoration: none !important;
 	padding: 2px;
 }
 
 .random:hover {
 	color: #222;
+	border: 1px solid #775d00;
 }
 
 .title {
